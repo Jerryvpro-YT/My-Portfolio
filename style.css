@@ -26,7 +26,6 @@ nav ul {
   width: 40%;
   height: 50px;
   /* background-color:red; */
-
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
@@ -40,7 +39,8 @@ nav ul li a {
   font-family: Arial;
   padding: 10px 20px;
   border-radius: 5px;
-
+  transition: all 0.2s;
+  /* background-color: rgb(48, 139, 30); */
 }
 
 nav ul li a:hover {
@@ -65,20 +65,6 @@ body {
   gap: 20px;
 }
 
-/* #home h1 {
-  text-align: center;
-  padding-to
-}
-#home p {
-  text-align: center;
-  margin: 30px 0px;
-  
-} 
-#home a {
-  text-align: center;
-  display: block;
-} */
-
 #home h1 {
   font-size: 3rem;
 
@@ -87,6 +73,7 @@ body {
 #home p {
   font-size: 1.5rem;
 }
+
 
 #home a {
   text-decoration: none;
@@ -107,7 +94,6 @@ body {
   width: 100%;
   height: 300px;
   /* background-color: skyblue; */
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -118,7 +104,6 @@ body {
   width: 80%;
   height: 200px;
   /* background-color: pink; */
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,8 +143,7 @@ body {
 
 #skills {
   width: 100%;
-  height: 700px;
-
+  /* background-color: tomato; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,7 +158,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-
+  /* background-color: #207f82; */
 }
 
 #skills .skillbox div {
@@ -188,6 +172,7 @@ body {
 
 #skills .skillbox div:hover {
   background-color:#2e8a36c1 ;
+  transform: 105%;
   scale: 105%;
 }
 
@@ -223,7 +208,7 @@ body {
 #contact {
   width: 100%;
   height: 300px;
-  background-color: cyan;
+  /* background-color: cyan; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -233,9 +218,10 @@ body {
 #contact .info {
   width: 500px;
   height: 250px;
-  background-color: tomato;
+  /* background-color: tomato; */
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #contact .map {
@@ -244,15 +230,20 @@ body {
 }
 
 #contact .info table {
-  width: 350px;
+  width: 400px;
   height: 130px;
-  background-color: #adadad;
+  /* background-color: #adadad; */
 }
 
 #contact .map iframe {
   width: 100%;
   height: 100%;
   border: none;
+  transition: all 0.5s;
+}
+
+#contact .map iframe:hover {
+  scale: 110%;
 }
 
 footer {
@@ -266,4 +257,57 @@ footer span {
   text-align: center;
   line-height: 40px;
   display: block;
+}
+
+@media only screen and (max-width: 950px) {
+  nav ul{
+    width: 65%;
+    /* background-color: #fff; */
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  body{
+    /* background-color: #191919; */
+  }
+  
+  nav ul{
+    width: 100%;
+  }
+
+  #home h1{
+    font-size: 2.5rem;
+  }
+
+  #home p{
+    font-size: 1.2rem;
+  }
+
+  #profile {
+    height: 500px;
+  }
+
+  #profile div {
+    flex-direction: column;
+    height: 75%;
+  }
+
+  #skills {
+    flex-direction: column;
+    height: 1500px;
+    
+    align-items: space-around;
+  }
+
+  #skills .skillbox {
+    flex-direction: column;
+    height: 700px;
+  }
+
+  #contact {
+    height: 550px;
+    flex-direction: column;
+  }
+
 }
